@@ -1,0 +1,23 @@
+.lineal-history {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin: auto;
+
+    .lineal-histories {
+        display: flex;
+
+        &:nth-child(even) {
+            flex-direction: row;
+        }
+
+        &:nth-child(odd) {
+            flex-direction: row-reverse;
+
+        }
+
+        div {
+            width: 30%;
+        }
+    }
+}

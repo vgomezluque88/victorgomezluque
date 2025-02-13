@@ -1,0 +1,25 @@
+header {
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    backdrop-filter: blur(10px);
+    text-align: center;
+    border-radius: 10px;
+    z-index: 1000;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+
+    ul {
+        display: flex;
+        gap: 40px;
+        margin: 0px;
+        padding: 0px;
+
+        li {
+            text-decoration: none;
+            list-style: none;
+
+        }
+    }
+}
