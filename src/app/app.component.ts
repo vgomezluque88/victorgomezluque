@@ -9,7 +9,7 @@ import { LinealhistoryComponent } from './widget/linealhistory/linealhistory.com
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HeaderComponent, FooterComponent, CubespinnerComponent, ImgborderComponent, LinealhistoryComponent],
+  imports: [RouterOutlet, HeaderComponent, FooterComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
