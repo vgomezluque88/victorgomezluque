@@ -1,15 +1,14 @@
 import { Component } from '@angular/core';
 import { HomeSliderComponent } from './components/home-slider/home-slider.component';
-import { skip } from 'rxjs';
 import { SkillsComponent } from './components/skills/skills.component';
-import { AboutComponent } from "../about/about.component";
 import { ExperienceComponent } from './components/experience/experience.component';
 import { SeparatorComponent } from './components/separator/separator.component';
+import { ProyectosHomeComponent } from './components/proyectos-home/proyectos-home.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [HomeSliderComponent, SkillsComponent, ExperienceComponent, SeparatorComponent, AboutComponent],
+  imports: [HomeSliderComponent, SkillsComponent, ExperienceComponent, SeparatorComponent, ProyectosHomeComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })

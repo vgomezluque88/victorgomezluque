@@ -49,6 +49,8 @@ body {
     font-size: 4rem;
     z-index: 1;
     margin: 0px;
+    margin-top: 50px;
+    margin-bottom: 50px;
 
 }
 
@@ -57,4 +59,42 @@ body {
     color: var(--substitle);
     margin-bottom: 5px;
     text-transform: uppercase;
+}
+
+
+
+.border_animations_dotted {
+    animation: dotted-move 1s infinite;
+}
+
+.border_animations_color {
+    animation: border-color-change 5s infinite;
+}
+
+@keyframes border-color-change {
+    0% {
+        border-color: var(--white);
+    }
+
+    50% {
+        border-color: var(--primary);
+    }
+
+    100% {
+        border-color: var(--white);
+    }
+}
+
+@keyframes dotted-move {
+    0% {
+        border-style: dotted;
+    }
+
+    50% {
+        border-style: dashed;
+    }
+
+    100% {
+        border-style: dotted;
+    }
 }
