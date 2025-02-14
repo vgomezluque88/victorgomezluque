@@ -1,1 +1,40 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import 'variable';
+
+:root {
+    --main-bg-color: black;
+    --primary: rgb(22, 242, 179);
+    --secondary: rgb(236, 72, 153);
+    --dark: #1f0533;
+    --white: rgb(255, 255, 255);
+    --textjson-home: rgb(252, 211, 77);
+}
+
+
+
+body {
+    background-color: var(--dark);
+    margin: 0px;
+    font-family: Inter, "Inter Fallback";
+}
+
+.color-primary {
+    color: var(--primary);
+}
+
+.color-secondary {
+    color: var(--secondary);
+}
+
+.margin-container {
+    max-width: 300px;
+    margin: auto;
+}
+
+@include desktop {
+    .margin-container {
+        max-width: 1200px;
+        margin: auto;
+    }
+}
