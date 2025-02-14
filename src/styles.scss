@@ -8,6 +8,8 @@
     --secondary: rgb(236, 72, 153);
     --dark: #1f0533;
     --white: rgb(255, 255, 255);
+    --title: rgb(255, 255, 255);
+    --substitle: rgb(170, 166, 195);
     --textjson-home: rgb(252, 211, 77);
 }
 
@@ -15,6 +17,7 @@
 
 body {
     background-color: var(--dark);
+    background: linear-gradient(90deg, rgb(3, 7, 18) 0%, var(--dark) 35%, rgb(6, 5, 5) 100%);
     margin: 0px;
     font-family: Inter, "Inter Fallback";
 }
@@ -28,13 +31,30 @@ body {
 }
 
 .margin-container {
-    max-width: 300px;
+    max-width: 70%;
     margin: auto;
 }
 
-@include desktop {
+
+
+@include desktop-1366 {
     .margin-container {
         max-width: 1200px;
-        margin: auto;
     }
+}
+
+.custom_title {
+    position: relative;
+    color: var(--title);
+    font-size: 4rem;
+    z-index: 1;
+    margin: 0px;
+
+}
+
+.custom_subtitle {
+    position: relative;
+    color: var(--substitle);
+    margin-bottom: 5px;
+    text-transform: uppercase;
 }

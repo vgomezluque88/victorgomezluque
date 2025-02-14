@@ -1,0 +1,83 @@
+@import '../../../../../variable';
+
+.margin-container {
+    max-width: 80%;
+}
+
+.experience {
+
+    h3,
+    h4 {
+        text-align: center;
+    }
+
+    .experience-block {
+        position: relative;
+        margin-top: 50px;
+
+        &::before {
+            content: " ";
+            position: absolute;
+            background-color: var(--white);
+            width: 3px;
+            height: 100%;
+
+            @include desktop {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+
+        &-content {
+            position: relative;
+            color: var(--white);
+
+            @include desktop {
+                display: flex;
+                flex-direction: row;
+
+                &:nth-child(odd) {
+                    flex-direction: row-reverse;
+                }
+            }
+
+            span {
+                position: absolute;
+                left: 0px;
+                transform: translateX(-23px);
+
+                @include desktop {
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+
+                img {
+                    width: 50px;
+                    height: 50px;
+                    background-color: white;
+                    border-radius: 50px;
+                }
+            }
+
+
+
+            &_text {
+                background: rgb(29, 24, 54);
+                padding: 20px;
+                margin-bottom: 20px;
+                margin-left: 50px;
+
+                @include desktop {
+                    width: 40%;
+                    margin-bottom: 0px;
+
+
+                    &:nth-child(odd) {
+                        text-align: right;
+                    }
+                }
+            }
+        }
+    }
+
+}
