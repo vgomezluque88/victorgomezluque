@@ -49,7 +49,7 @@ header {
         display: none;
         width: 0px;
         overflow: hidden;
-        transition: width 1s ease-in-out;
+        transition: width 0.5s ease-in-out;
 
 
 
@@ -64,7 +64,7 @@ header {
             padding: 0px;
             background: var(--dark);
             width: 100%;
-            animation: expandir 1s ease-in-out forwards;
+            animation: expandir 0.5s ease-in-out forwards;
             margin: 0px;
             height: 100%;
             z-index: 9999;
