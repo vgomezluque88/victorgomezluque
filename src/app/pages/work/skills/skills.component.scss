@@ -7,12 +7,40 @@
 
         @include desktop {
             flex-direction: row;
-
-
         }
 
         &_text {
             color: var(--white);
+
+            @include desktop {
+                padding-right: 100px;
+            }
+
+            &-progressbar {
+                display: flex;
+                flex-direction: column;
+
+                &-percskill {
+                    position: relative;
+                    display: inline-block;
+                    color: white;
+                    overflow: hidden;
+
+
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        height: 1px;
+                        width: 0;
+                        /* Inicia en 0% */
+                        background: linear-gradient(90deg, var(--primary, #ff9800), var(--secondary, #f44336));
+                        animation: background_before 2s forwards;
+                    }
+
+                }
+            }
 
             @include desktop {
                 width: 50%;
@@ -41,7 +69,7 @@
                     height: 100%;
                     background-color: var(--primary);
                     filter: blur(42px);
-                    animation: _ngcontent-ng-c3493371745_backgroundcolor 10s infinite alternate;
+                    animation: backgroundcolor 5s infinite linear;
                 }
 
                 img {
@@ -73,12 +101,35 @@
 }
 
 @keyframes backgroundcolor {
-    to {
-        background-color: var(--primary);
+
+    0% {
+        opacity: 0;
     }
 
-    from {
+    25% {
         background-color: var(--secondary);
+        opacity: 1;
     }
+
+    50% {
+        background-color: var(--primary);
+
+    }
+
+    100% {
+        opacity: 0;
+    }
+
+}
+
+@keyframes background_before {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: var(--final-width);
+    }
+
 
 }

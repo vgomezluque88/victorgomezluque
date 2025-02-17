@@ -1,0 +1,46 @@
+@import '../../../variable';
+
+.about {
+    &-content {
+        display: flex;
+        flex-direction: column;
+
+        @include desktop {
+            flex-direction: row;
+        }
+
+        &_text {
+            color: var(--white);
+
+            @include desktop {
+                width: 50%;
+            }
+        }
+
+
+
+        &_img {
+            @include desktop {
+                width: 50%;
+            }
+
+            img {
+                display: flex;
+                width: 400px;
+                margin: auto;   
+                border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+                animation: border_movement 5s infinite;
+            }
+        }
+    }
+}
+
+@keyframes border_movement {
+    0%, 100% {
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+    
+    50% {
+        border-radius: 40% 60% 70% 30% / 40% 70% 30% 60%;
+    }
+}
