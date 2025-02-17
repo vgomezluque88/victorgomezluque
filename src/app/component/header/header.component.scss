@@ -6,18 +6,44 @@ header {
     display: flex;
     justify-content: space-between;
 
+    .header-container {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+
+        .header_hamburguer {
+            margin: auto 0px;
+
+            svg {
+                width: 20px;
+                height: 20px;
+
+                path {
+                    fill: var(--white);
+
+                }
+            }
+        }
+
+        @include desktop {
+            svg {
+                display: none;
+            }
+        }
+    }
+
     .title {
-        font-size: 24px;
         background: linear-gradient(45deg, var(--primary), var(--secondary));
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-    }
 
-    svg {
-        path {
-            fill: var(--white);
+
+        @include desktop {
+            font-size: 24px;
         }
     }
+
+
 
     .menu {
         display: none;
@@ -25,8 +51,10 @@ header {
         overflow: hidden;
         transition: width 1s ease-in-out;
 
+
+
         &.menu-open {
-            position: absolute;
+            position: fixed;
             top: 0px;
             left: 0px;
             display: block;
@@ -36,6 +64,14 @@ header {
             margin: 0px;
             height: 100%;
             z-index: 9999;
+
+            li {
+                margin-top: 50px;
+
+                a {
+                    font-size: 40px;
+                }
+            }
         }
 
         svg {
@@ -56,6 +92,17 @@ header {
 
         @include desktop {
             display: flex;
+            width: 100%;
+            margin: auto;
+            justify-content: end;
+
+            svg {
+                display: none;
+            }
+
+            li {
+                margin: 5px 0px !important;
+            }
         }
 
         gap: 40px;
