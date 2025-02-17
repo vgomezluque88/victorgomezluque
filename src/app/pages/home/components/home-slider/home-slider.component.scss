@@ -29,6 +29,20 @@
             transform: rotate(0);
             transform-origin: 70% 70%;
         }
+
+        &-icons {
+            display: flex;
+            gap: 10px;
+
+            svg {
+                width: 30px;
+
+                path {
+                    fill: white;
+
+                }
+            }
+        }
     }
 
     &_code {
