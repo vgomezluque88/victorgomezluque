@@ -25,9 +25,11 @@ export class HeaderComponent {
   }
 
   closeMenu() {
-    this.toggleMenu();
+    if (this.isMenuOpen) {
+      this.toggleMenu();
+    }
   }
-  
+
   ngAfterViewInit() {
     const menuLinks = document.querySelectorAll('.menu a');
     menuLinks.forEach(link => {
