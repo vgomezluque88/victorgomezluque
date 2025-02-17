@@ -17,7 +17,7 @@
 
 body {
     background-color: var(--dark);
-    background: linear-gradient(90deg, rgb(3, 7, 18) 0%, var(--dark) 35%, rgb(6, 5, 5) 100%);
+    background: linear-gradient(90deg, rgb(3, 7, 18) 25%, var(--dark) 50%, rgb(6, 5, 5) 100%);
     margin: 0px;
     font-family: Inter, "Inter Fallback";
 }
@@ -34,6 +34,7 @@ body {
     max-width: 90%;
     margin: auto;
 }
+
 @include tablet {
     .margin-container {
         max-width: 70%;
@@ -102,3 +103,4 @@ body {
         border-style: dotted;
     }
 }
+

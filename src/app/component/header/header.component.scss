@@ -57,27 +57,40 @@ header {
             position: fixed;
             top: 0px;
             left: 0px;
-            display: block;
-            background-color: var(--dark);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            padding: 0px;
+            background: var(--dark);
             width: 100%;
             animation: expandir 1s ease-in-out forwards;
             margin: 0px;
             height: 100%;
             z-index: 9999;
+            padding: 0px;
 
             li {
-                margin-top: 50px;
+                position: relative;
+                padding: 10px 20px;
+                border-radius: 5px;
+                display: inline-block;
 
                 a {
-                    font-size: 40px;
+                    font-size: 25px;
+                    color: var(--white);
+                    padding: 10px 20px;
+                    text-decoration: none;
+
                 }
             }
+
         }
 
         svg {
             position: absolute;
             top: 20px;
-            right: 60px;
+            right: 30px;
 
             path {
                 fill: var(--white);
@@ -110,7 +123,6 @@ header {
         li {
             text-decoration: none;
             list-style: none;
-            margin: auto;
 
             a {
                 text-decoration: none;
@@ -141,5 +153,15 @@ header {
 
     to {
         width: 0%;
+    }
+}
+
+@keyframes breath {
+    0% {
+        opacity: 0.3;
+    }
+
+    100% {
+        opacity: 0.5;
     }
 }
