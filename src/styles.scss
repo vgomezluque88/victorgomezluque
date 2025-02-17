@@ -34,7 +34,11 @@ body {
     max-width: 90%;
     margin: auto;
 }
-
+@include tablet {
+    .margin-container {
+        max-width: 70%;
+    }
+}
 
 
 @include desktop-1366 {
