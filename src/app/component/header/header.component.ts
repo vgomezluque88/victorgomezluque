@@ -9,30 +9,25 @@ import { RouterLink } from '@angular/router';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
-  isOpen = false;
+  isMenuOpen = false;
+  isAnimating = false;
 
   toggleMenu() {
-    this.isOpen = !this.isOpen;
-    this.updateMenuState();
+    if (this.isMenuOpen) {
+      this.isAnimating = true;
+      setTimeout(() => {
+        this.isMenuOpen = false;
+        this.isAnimating = false;
+      }, 1000); // Coincide con la duración de la animación
+    } else {
+      this.isMenuOpen = true;
+    }
   }
 
   closeMenu() {
-    this.isOpen = false;
-    this.updateMenuState();
+    this.toggleMenu();
   }
-
-  private updateMenuState() {
-    const svg = document.querySelector('.header_hamburguer');
-    const list = document.querySelector('.menu');
-
-    if (svg) {
-      svg.classList.toggle('menu-open', this.isOpen);
-    }
-
-    if (list) {
-      list.classList.toggle('menu-open', this.isOpen);
-    }
-  }
+  
   ngAfterViewInit() {
     const menuLinks = document.querySelectorAll('.menu a');
     menuLinks.forEach(link => {

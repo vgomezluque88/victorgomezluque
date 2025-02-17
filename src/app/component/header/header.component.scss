@@ -11,19 +11,54 @@ header {
         background: linear-gradient(45deg, var(--primary), var(--secondary));
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-
     }
 
-    ul {
+    svg {
+        path {
+            fill: var(--white);
+        }
+    }
+
+    .menu {
         display: none;
+        width: 0px;
+        overflow: hidden;
+        transition: width 1s ease-in-out;
+
+        &.menu-open {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            display: block;
+            background-color: var(--dark);
+            width: 100%;
+            animation: expandir 1s ease-in-out forwards;
+            margin: 0px;
+            height: 100%;
+            z-index: 9999;
+        }
+
+        svg {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+
+            path {
+                fill: var(--white);
+            }
+        }
+
+        &.menu-closing {
+            width: 0px;
+            animation: esconder 1s ease-in-out forwards;
+
+        }
 
         @include desktop {
             display: flex;
         }
 
         gap: 40px;
-        margin: 0px;
-        padding: 0px;
 
         li {
             text-decoration: none;
@@ -39,5 +74,25 @@ header {
                 }
             }
         }
+    }
+}
+
+@keyframes expandir {
+    from {
+        width: 0px;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes esconder {
+    from {
+        width: 100%;
+    }
+
+    to {
+        width: 0%;
     }
 }
