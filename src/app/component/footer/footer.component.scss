@@ -1,0 +1,22 @@
+@import '../../../variable';
+
+footer {
+    display: flex;
+
+    @include desktop {
+
+        justify-content: space-between;
+    }
+
+    .icons {
+        display: flex;
+
+        svg {
+            width: 30px;
+
+            path {
+                fill: var(--white);
+            }
+        }
+    }
+}
