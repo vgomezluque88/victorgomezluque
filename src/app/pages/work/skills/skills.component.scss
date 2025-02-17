@@ -1,0 +1,45 @@
+@import '../../../../variable';
+
+.skills {
+    &-block_content {
+        display: flex;
+        flex-direction: column;
+
+        @include desktop {
+            flex-direction: row;
+
+
+        }
+
+        &_text {
+            color: var(--white);
+
+            @include desktop {
+                width: 50%;
+            }
+        }
+
+
+        &_img {
+            display: grid;
+            grid-template-columns: repeat(4, 25%);
+
+            @include desktop {
+                width: 50%;
+            }
+
+            &-content {
+                img {
+                    width: 100px;
+                    display: flex;
+                    margin: auto;
+                }
+
+                p {
+                    color: var(--white);
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
