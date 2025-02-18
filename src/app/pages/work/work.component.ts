@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { SkillsComponent } from './skills/skills.component';
-import { ExperienceComponent } from './experience/experience.component';
+import { ExperienceComponent } from '../home/components/experience/experience.component';
 
 @Component({
     selector: 'app-work',
